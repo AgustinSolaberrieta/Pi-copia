@@ -27,7 +27,7 @@ const SearchBar = () => {
        <img src={logo} alt="" className='logo' />
       </div>
       {/* Agrega el campo de entrada y conecta la función handleChange */}
-      <div class="containerInput">
+      <div className="containerInput">
       <input
         type="search"
         placeholder="Buscar drivers por nombre..."
