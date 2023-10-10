@@ -1,24 +1,23 @@
 
 .shadow__btn {
-  padding: 10px 20px;
+  padding: 1px 1px;
   border: none;
   font-size: 17px;
   color: #140f0f;
-  border-radius: 7px;
-  letter-spacing: 4px;
-  font-weight: 700;
+  border-radius: 50px;
+  font-size: 2px;
   text-transform: uppercase;
   transition: 0.5s;
   transition-property: box-shadow;
 }
 
 .shadow__btn {
-  background: rgb(255, 51, 0);
-  box-shadow: 0 0 25px rgb(196, 0, 0);
+  background: rgba(192, 50, 15, 0);
+  box-shadow: 0 0 25px rgba(126, 94, 94, 0.623);
 }
 
 .shadow__btn:hover {
-  box-shadow: 0 0 5px rgb(247, 40, 26),
+  box-shadow: 0 0 5px rgba(151, 136, 135, 0.178),
               0 0 25px rgb(236, 108, 57),
               0 0 50px rgb(73, 28, 7),
               0 0 100px rgb(250, 66, 20);
@@ -34,12 +33,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Esto hará que el contenido ocupe todo el alto de la pantalla */
-  background-color: black; /* Cambia el color de fondo a negro */
+  height: 97vh; /* Esto hará que el contenido ocupe todo el alto de la pantalla */
+ /* Cambia el color de fondo a negro */
   color: white; /* Cambia el color del texto a blanco para que sea legible en el fondo negro */
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px; /* Espacio debajo del encabezado */
+
+
+.Pag_inicio{
+  background-image: url("./Diseño.png");
 }

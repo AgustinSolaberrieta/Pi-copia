@@ -1,12 +1,12 @@
 import {Link} from 'react-router-dom'
 import './LandingPage.css'
+import logoo from "./logo.png"
 
 const LandingPage = () =>{
     return(
         <div className='Pag_inicio'>
-            <h1>Landig para entrar a la pagina </h1>
             <button class="shadow__btn">
-                <Link to="/home">Entro</Link>
+                <Link to="/home"><img src={logoo} style={{ width: '300px', height: 'auto' }} /></Link>
             </button>
         </div>
     )

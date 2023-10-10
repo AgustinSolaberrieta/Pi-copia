@@ -10,7 +10,7 @@
   max-width: 800px;
   margin: 0 auto;
   margin-top: 2%;
-  border: 2px solid black;
+  border: 5px solid  rgba(255, 0, 0, 0.11);
 }
 
 .detail-content {

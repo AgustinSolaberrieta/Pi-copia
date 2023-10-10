@@ -1,20 +1,10 @@
-.cards {
-  border: 7px solid #e0e0e0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  background-color: #1c9ed1;
-  overflow: hidden;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 300px;
-  margin: 20px;
-}
+
 
 
 .cards {
   background-color: rgba(248, 4, 4, 0.281); /* Fondo blanco con opacidad */
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 2px 4px rgba(211, 13, 13, 0.699); /* Sombra suave */
   padding: 10px;
   text-align: center;
   transition: transform 0.2s;
@@ -41,8 +31,8 @@
 .cards {
   width: 200px;
   height: 250px;
-  background: #47403fb6;
-  border: 2px solid #e2c5c5;
+  background: #ebcecba2;
+  border: 2px solid #e6d8d8;
   border-radius: 4px;
   position: relative;
   transform-style: preserve-3d;

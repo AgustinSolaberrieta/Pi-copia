@@ -1,10 +1,14 @@
 .cartas-container{
   background-image: url("./autos.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column; /* Cambia la dirección de flexbox a columna */
+  justify-content: flex-start; /* Coloca las cartas en la parte superior verticalmente */
+  align-items: center; /* Centra horizontalmente las cartas */
 
-    background-size: cover;
-    background-position: center;
   
-
 }.cartas-container {
     display: flex;
     flex-wrap: wrap;
@@ -33,18 +37,20 @@
   }
   
   .page-link {
-    --primary-color: #111;
-    --hovered-color: #c84747;
+    --primary-color: #111111;
+    --hovered-color: #e91111;
     position: relative;
     display: flex;
     font-weight: 600;
     font-size: 20px;
     gap: 0.5rem;
     align-items: center;
+
   }
   
 .page-link p {
-    margin: 0;
+ 
+    margin: 8%;
     position: relative;
     font-size: 20px;
     color: var(--primary-color)
