@@ -11,8 +11,4 @@ server.use(cors());
 
 server.use(router);
 
-
-
-
-
 module.exports = server;
