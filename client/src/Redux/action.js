@@ -1,6 +1,6 @@
 import { GET_DRIVERS , GET_DRIVERS_DETAIL, CLEAN_DETAIL, SET_CURRENT_PAGE, SEARCHBAR, SET_ORDER_BY_ASC,SET_ORDER_BY_DESC, ORDERCARD_DOB_ASC, ORDERCARD_DOB_DESC, CREATE_DRIVER, GET_TEAM, FILTER_BY_DB, FILTER_BY_API, FILTER_TEAM} from "./action-types";
 import axios from "axios";
-const endpoint = 'http://localhost:3001'
+const endpoint = import.meta.env.VITE_APP_URL
 
 export const getDrivers = () => {
     return async (dispatch) => {

@@ -129,7 +129,8 @@ const Form = () => {
         <button onClick={handleLoadMoreTeams}>Cargar más equipos</button>
       )}
       <hr />
-      <button onClick={handleSubmit}>Crear</button>
+
+      <button onClick={handleSubmit} >Crear</button>
     </div>
   );
 };

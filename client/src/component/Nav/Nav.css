@@ -1,13 +1,14 @@
 /* Estilos para centrar el botón */
 .Boton2 {
-    background-color: #4e4b4b;
-    color: white;
-    padding: 10px 20px;
+    background-color: #3a3838;
+    color: rgb(238, 26, 26);
+    padding: 10px 10px;
     border: 9px;
-    border-radius: 5px;
+    border-radius: 0px;
     cursor: pointer;
     margin: 0 auto; /* Centra horizontalmente el botón */
-
+    margin-top: -20px;
+    margin-bottom: 8px;
     text-align: center; /* Centra el texto dentro del botón */
     width: fit-content; /* Establece el ancho del botón según el contenido */
   }
