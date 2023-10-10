@@ -1,4 +1,4 @@
-const { DataTypes, UUIDV4 } = require('sequelize');
+const { DataTypes, UUIDV4 } = require('sequelize'); // para definir el tipo de datos y generar identificadores únicos.
 
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
@@ -42,9 +42,3 @@ module.exports = (sequelize) => {
   });
 };
 // ID (deben ser distintos a los que vienen de la API). *
-// Nombre. *
-// Apellido. *
-// Descripción. *
-// Imagen. *
-// Nacionalidad. *
-// Fecha de Nacimiento. *

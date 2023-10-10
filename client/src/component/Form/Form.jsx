@@ -84,7 +84,7 @@ const Form = () => {
   return (
   <div>
      <button onClick={handleBack} className="logOut" style={{ marginLeft: 'auto' }}>BACK</button><h1 className="titulo">Create your own driver</h1>
-
+ 
     <div className="formulario">
       
       <div className="Columna">
@@ -115,6 +115,7 @@ const Form = () => {
       </div> 
 
       <hr />
+      <div className="equipos">
       <label htmlFor="teams">Escuderías</label>
 
       <ul className="team-list">
@@ -136,7 +137,7 @@ const Form = () => {
       {teamsToShow < apiteams.length && (
         <button onClick={handleLoadMoreTeams}>Cargar más equipos</button>
       )}
-      <hr />
+      <hr /></div>
 
       <button onClick={handleSubmit} >Crear</button>
     </div></div>

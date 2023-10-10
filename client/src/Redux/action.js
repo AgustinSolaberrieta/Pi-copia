@@ -6,8 +6,7 @@ const endpoint = "http://localhost:3001"
 export const getDrivers = () => {
     return async (dispatch) => {
        const data = await axios.get(`${endpoint}/drivers`)
-       
-      
+
        if (!data) {
         throw Error("Salio mal")
        }

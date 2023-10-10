@@ -20,14 +20,3 @@ export const FILTER_TEAM = "FILTER_TEAM"
 
 
 
-
-
-// export const GET_DRIVERS = "GET_DRIVERS"
-// export const GET_DRIVERS_DETAIL = "GET_DRIVERS_DETAIL"
-// export const CLEAN_DETAIL = "CLEAN_DETAIL"
-// export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE"
-// export const SEARCHBAR = "SEARCHBAR" 
-// export const ORDER_DRIVERS = " ORDER_DRIVERS";
-// export const ORDER_BY_ORIGIN = "ORDER_BY_ORIGIN";
-// export const CREATE_DRIVER= "CREATE_DRIVER"
-// export const GET_TEAM= "GET_TEAM"

@@ -67,7 +67,7 @@ const Detail = () => {
   }, [dispatch, id]);
 
   return (
-    <div>
+    <div className="contenedor">
     <button onClick={handleBack} className="logOut" style={{ marginLeft: 'auto' }}>BACK</button>
     <div className="detail-container">
       {characterDetail ? (

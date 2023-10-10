@@ -1,6 +1,6 @@
 .detail-container {
  
-  color: #929292;
+  color: #4e4e4e;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -128,3 +128,11 @@
 .logOut:hover::after, .logOut:hover::before {
   width: 100%;
 }
+
+
+
+.contenedor{
+  background-color: #0808084d;
+}
+
+

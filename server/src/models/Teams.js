@@ -17,5 +17,3 @@ module.exports = (sequelize) => {
 
   });
 };
-// ID. *
-// Nombre. *

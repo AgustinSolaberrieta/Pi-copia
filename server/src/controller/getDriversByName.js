@@ -28,22 +28,21 @@ const getDriversByName = async (req, res) => {
          //Busca directamente cualquier coincidencia de mi nombre
       },
     });
+   
+   
 
     if (dbDriver) {
     //   Si se encuentra en la base de datos, devuelve el resultado
-      result= [...result, ...dbDriver]
+      // result= [...result, ...dataValue]
       // hace una copia de lo q tengo en result y le agrega lo q encuentra en la db
+      const  dataValue = dbDriver.dataValues
+      result.push(dataValue)
+      
     }
 
     
-    // const response = await axios.get(`http://localhost:5000/drivers?name.forename=${mayus}`);
     
-    // if (response.data.length === 0 ) {
     
-    // // Si no se encuentra en ningún lugar, devuelve un mensaje de error
-    //  return res.status(404).json({ error: 'Conductor no encontrado' });
-    // }
-
     // Si no se encuentra en la base de datos, busca en la API externa
     const respuesta= await axios.get(`http://localhost:5000/drivers`)
     const resu = respuesta.data
@@ -75,6 +74,7 @@ const getDriversByName = async (req, res) => {
 
   } catch (error) {
     // Maneja los errores
+    console.log(error.mennsage);
     return res.status(500).json({ error: 'Error interno del servidor' });
   }
 };

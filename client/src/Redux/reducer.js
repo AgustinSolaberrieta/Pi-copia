@@ -53,9 +53,6 @@ const reducer = (state = initialState , action) => {
              if (nameA > nameB) return 1;
               return 0;
              });
-            // const sortedTeams = action.payload.sort((a, b) => {
-            //   return a.name.localeCompare(b.name);
-            // });
             return{
               ...state,
               teams: sortedTeams
@@ -72,6 +69,7 @@ const reducer = (state = initialState , action) => {
                               data: sortedByNameAsc
                             }
                           };
+
              //ORDEN 
         case SET_ORDER_BY_DESC:
            const sortedByNameDesc = [...state.drivers.data].sort((a, b)=>{
@@ -172,69 +170,3 @@ const reducer = (state = initialState , action) => {
     }
 }
 export default reducer;
-// import { CLEAN_DETAIL, GET_DRIVERS,GET_DRIVERS_DETAIL, SEARCHBAR, ORDER_BY_ORIGIN, ORDER_DRIVERS, CREATE_DRIVER, GET_TEAM} from "./action-types";
-
-// const initialState={
-//     drivers: [],
-//     copyDrivers:[],
-//     driversDetail : {},
-//     teams:[],
-// }
-
-// const reducer = (state = initialState , action) => {
-//     switch(action.type){
-//         case GET_DRIVERS:
-//             return{
-//                 ...state,
-//                 drivers: action.payload,
-//                 copyDrivers: action.payload
-//             }  
-
-//         case GET_DRIVERS_DETAIL:
-//             return{
-//                 ...state,
-//                 driversDetail: action.payload
-//             }    
-//         case CLEAN_DETAIL:
-//         return{
-//            ...state,
-//            driversDetail: {}
-
-//         }
-//         case SEARCHBAR:
-//             return{
-//                 ...state,
-//                 drivers: action.payload
-//             }
-
-//         case CREATE_DRIVER:
-//           return{
-//             ...state,
-//             drivers: [...state.drivers, action.payload.data],
-//             copyDrivers: [...state.drivers, action.payload.data]
-
-//           }  
-//         case ORDER_DRIVERS: 
-//           return {
-//             ...state, 
-//             drivers: action.payload
-//           }
-//         case ORDER_BY_ORIGIN:
-//           return {
-//             ...state,
-//             copyDrivers:action.payload
-//           }
-//           case GET_TEAM :
-//             return{
-//               ...state,
-//               teams: action.payload
-//             }  
-
-            
-
-   
-//         default:
-//             return {...state}
-//     }
-// }
-// export default reducer;

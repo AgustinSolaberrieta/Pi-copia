@@ -8,7 +8,9 @@
   font-size: 2px;
   text-transform: uppercase;
   transition: 0.5s;
-  transition-property: box-shadow;
+  transition-property: box-shadow; 
+  width: 300px¨;
+   height: auto
 }
 
 .shadow__btn {
@@ -42,4 +44,5 @@
 
 .Pag_inicio{
   background-image: url("./Diseño.png");
+  filter: contrast(0.9); 
 }
