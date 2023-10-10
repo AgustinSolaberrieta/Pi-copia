@@ -1,0 +1,130 @@
+.detail-container {
+ 
+  color: #929292;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 75vh; /* Cambiado a min-height para permitir el crecimiento */
+  background-color: #CCCCCC;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 2%;
+  border: 2px solid black;
+}
+
+.detail-content {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+.detail-image img {
+  max-width: 180%;
+  max-height: 500px;
+  height: auto;
+  margin-right: 30px;
+  flex-shrink: 0; /* Evita que la imagen se encoja para ajustarse */
+}
+
+.detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+.detail-title {
+  
+  font-size: 34px;
+  margin: 0px 0;
+}
+
+/* Estilos para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+  .detail-content {
+    flex-direction: column-reverse;
+  }
+
+  .detail-image img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.detail-info {
+  flex: 1; /* La información ocupa todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.detail-title {
+  font-size: 34px;
+  margin: 0px 0; /* Espacio arriba y abajo */
+}
+
+/* Estilos para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+  .detail-image img {
+    margin-right: 0; /* Elimina el espacio a la derecha de la imagen en pantallas pequeñas */
+    margin-bottom: 20px; /* Mueve la imagen hacia abajo */
+  }
+}
+
+/* Estilos para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+  .detail-content {
+    flex-direction: column-reverse; /* Cambia el orden de la imagen y la información */
+  }
+
+  .detail-image img {
+    margin-right: 0; /* Elimina el espacio a la derecha de la imagen en pantallas pequeñas */
+    margin-bottom: 20px; /* Mueve la imagen hacia abajo */
+  }
+}
+
+/* Detail.css */
+/* ... (tu código actual) */
+.logof1 {
+  position: absolute;
+  bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+  right: 10px; /* Ajusta la distancia desde la derecha */
+  z-index: 80; /* Asegura que el logo esté encima del contenido */
+}
+
+.logof1 img {
+  width: 150px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+
+
+
+
+.logOut {
+  color: rgba(119, 111, 111, 0.76);
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background-color: black;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logOut::before {
+  margin-left: auto;
+}
+
+.logOut::after, .logOut::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+.logOut:hover::after, .logOut:hover::before {
+  width: 100%;
+}

@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos en la línea */
+    padding: 0px; /* Añade espacio alrededor del contenido */
+  }
+  
+  .header {
+    margin-right: 28%; /* Espacio entre el logo y el campo de búsqueda */
+  }
+  
+  .logo {
+    width: 180px; /* Ajusta el ancho del logo según sea necesario */
+    height: auto; /* Mantiene la proporción original del logo */
+  }
+  
+  .form-container {
+    display: flex; /* Crea un contenedor flex para los elementos del formulario */
+    align-items: center; /* Centra verticalmente los elementos en el formulario */
+  }
+  
+  /* Estilos adicionales según sea necesario */
+  body{
+    background-color: black;
+  }
+
+  .logOut{
+    align-content: left
+    ;
+  }
+
+
+  .containerInput {
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 0 4px 0;
+    z-index: 1;
+    font-size: 15px;
+  }
+  
+  .containerInput::before {
+    content: '';
+    width: 110%;
+    aspect-ratio: 1;
+    position: absolute;
+    inset: 0 0 0 0;
+    margin: auto;
+    animation: rotate6234 2.5s ease-in-out infinite;
+    z-index: -1;
+    background-image: conic-gradient(from 0deg at 50% 50%, #073AFF00 0%, #FF0000FF 25%, #073AFF00 25%);
+  }
+  
+  .containerInput > input {
+    width: 210px;
+    height: 30px;
+    font-size: inherit;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    background-color: #22333b;
+    outline: 5px solid #0a0a0a;
+  }
+  
+  .containerInput > input:focus {
+    outline: none;
+  }
+  
+  .containerInput > input:not(:placeholder-shown) {
+    outline: none;
+  }
+  
+  .containerInput > input:not(:placeholder-shown):valid {
+    outline: 4px solid rgb(0, 255, 183);
+    border-radius: 0;
+  }
+  
+  @keyframes rotate6234 {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .submit {
+    background-color: rgb(224, 26, 26); /* Establece el color de fondo a negro */
+    color: white; /* Cambia el color del texto a blanco para mayor contraste */
+    /* Otros estilos opcionales */
+    border-radius: none;
+    padding: 3px 5px; /* Ajusta el espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor al puntero cuando se coloca sobre el botón */
+  }
+  
+  .submit:hover {
+    background-color: #333; /* Cambia el color de fondo cuando se pasa el mouse por encima */
+  }
+  
+

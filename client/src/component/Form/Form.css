@@ -1,0 +1,123 @@
+/* Estilos para el contenedor del formulario */
+.formulario {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #8d4f47;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para etiquetas */
+
+
+/* Estilos para campos de entrada */
+
+
+
+/* Estilos para la lista de equipos */
+.team-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.team-list div {
+  flex: 0 0 calc(33.33% - 10px);
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.team-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Estilos generales para el formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px; /* Ajusta el ancho según tus necesidades */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+/* Estilos para los campos de entrada */
+
+.formulario input {
+  font-size: 16px;
+  padding: 10px 100px 10px 5px;
+  display: block;
+  width: 50%; /* Ocupar todo el ancho disponible */
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+  margin-bottom: 10px; /* Espacio entre campos */
+}
+
+
+/* Estilos para la animación de la etiqueta cuando el campo está enfocado o tiene un valor */
+/* .formulario input:focus ~ label, .formulario input:valid ~ label {
+  top: -10px;
+  font-size: 14px;
+  color: #f58443;
+} */
+
+/* Estilos para la línea bajo el campo de entrada */
+
+
+.formulario .bar:before,
+.formulario .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #d34735;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.formulario .bar:before {
+  left: 0;
+}
+
+.formulario .bar:after {
+  right: 0;
+}
+
+.formulario input:focus ~ .bar:before,
+.formulario input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* Estilos para resaltar durante la animación */
+.formulario .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.formulario input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* Keyframes para la animación de resaltado */
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+

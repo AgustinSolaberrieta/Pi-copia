@@ -1,0 +1,58 @@
+
+.filtros {
+  background-color:  #d00000; /* Rojo brillante */
+  padding: 10px; /* Agrega espacio entre el contenido y el fondo */
+  position: relative; /* Necesario para posicionar elementos hijos con respecto a este contenedor */
+}
+
+/* Línea brillante por encima del fondo rojo */
+.filtros::before {
+  content: ''; /* Crea un elemento ficticio */
+  position: absolute; /* Posición absoluta con respecto al contenedor .filtros */
+  top: 0; /* Desde la parte superior del contenedor */
+  left: 0; /* Desde la izquierda del contenedor */
+  width: 100%; /* Ancho igual al ancho del contenedor */
+  height: 2px; /* Altura de la línea */
+  background-color: #fff; /* Color de la línea brillante */
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.5); /* Sombra para dar un efecto brillante */
+}
+
+
+.filtros::after {
+  content: ''; /* Crea un elemento ficticio */
+  position: absolute; /* Posición absoluta con respecto al contenedor .filtros */
+  bottom: 0; /* Desde la parte inferior del contenedor */
+  left: 0; /* Desde la izquierda del contenedor */
+  width: 100%; /* Ancho igual al ancho del contenedor */
+  height: 2px; /* Altura de la línea */
+  background-color: #fff; /* Color de la línea brillante */
+  box-shadow: 0px -2px 5px rgba(255, 255, 255, 0.5); /* Sombra para dar un efecto brillante */
+}
+
+
+
+
+
+
+.filtros {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos horizontalmente */
+  margin-left: 10px; /* Margen izquierdo */
+  margin-right: 10px; /* Margen derecho */
+  max-width: 100%; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+.filtros select {
+  flex-grow: 0; /* No se expanden automáticamente */
+  padding: 10px 20px; /* Ajusta el espaciado interno */
+  border: 2px solid #ccc; /* Añade un borde */
+  color: rgb(200, 200, 200); /* Gris brillante */
+
+  border-radius: 5px; /* Agrega esquinas redondeadas */
+  background-color: rgb(10, 10, 10); /* Cambia el color de fondo */
+  width: 259px; /* Establece un ancho */
+  height: 40px; /* Establece una altura */
+}
+
+

@@ -1,0 +1,90 @@
+.cards {
+  border: 7px solid #e0e0e0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-color: #1c9ed1;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px;
+}
+
+
+.cards {
+  background-color: rgba(248, 4, 4, 0.281); /* Fondo blanco con opacidad */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  margin: 10px;
+}
+
+.cards:hover {
+  transform: translateY(5px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+.card-title {
+  font-size: 0.9rem;
+  margin-bottom:-5px;
+}
+
+
+
+
+/* Personaliza otros estilos según tus preferencias */
+
+
+
+
+.cards {
+  width: 200px;
+  height: 250px;
+  background: #47403fb6;
+  border: 2px solid #e2c5c5;
+  border-radius: 4px;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .5s;
+}
+
+.cards:hover {
+  transform: translateZ(10px) rotateX(20deg) rotateY(20deg);
+}
+
+.card-title  {
+  color: #fff;
+  position: absolute;
+  top: 1.2%;
+  
+  transform: translateY(-50%);
+  transition: transform .5s;
+  font: 700 1.5rem monospace;
+  text-shadow: -1px -1px 0 #a34d4d,  
+    1px -1px 0 #363434,
+    -1px 1px 0 #e92323,
+     1px 1px 0 #a15555;
+}
+
+
+
+.cards:hover .card_title {
+  transform: translateZ(50px);
+}
+
+.cards .-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-image {
+  
+  max-width: 100%;
+  max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+  border-radius: 10px;
+ /* Ajusta la imagen para llenar el espacio sin estirarla */
+  margin-top: 25px;
+  margin-bottom: -29px;
+}

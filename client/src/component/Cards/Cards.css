@@ -1,0 +1,106 @@
+.cartas-container{
+  background-image: url("./autos.jpg");
+
+    background-size: cover;
+    background-position: center;
+  
+
+}.cartas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente las cartas */
+    align-items: center; /* Centra verticalmente las cartas */
+  }
+  
+  .cartas-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente las cartas */
+    align-items: center; /* Centra verticalmente las cartas */
+    width: 100%;
+  }
+  
+  .cartas {
+    flex-basis: calc(20.33% - 10px); /* Reduce el espacio entre las cartas */
+    margin: 2px 10px; /* Reduce el margen entre las cartas horizontalmente */
+  }
+  
+  .page-link {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+  }
+  
+  .page-link {
+    --primary-color: #111;
+    --hovered-color: #c84747;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+.page-link p {
+    margin: 0;
+    position: relative;
+    font-size: 20px;
+    color: var(--primary-color)
+  }
+  
+  .page-link::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+  }
+  
+  .page-link p::before {
+    position: absolute;
+  /*   box-sizing: border-box; */
+    content: "Subscribe";
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+  }
+  
+  .page-link:hover::after {
+    width: 100%;
+  }
+  
+  .page-link:hover p::before {
+    width: 100%;
+  }
+  
+  .page-link:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color)
+  }
+  
+  .page-link svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+  }
+  .pagination {
+    color: whitesmoke;
+    display: flex; /* Usar flexbox para centrar los botones horizontalmente */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Centrar los elementos verticalmente */
+    gap: 20px; /* Espacio entre los botones */
+    
+  }
+  .page-link{
+    color: aliceblue;
+  }
+  
