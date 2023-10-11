@@ -46,7 +46,7 @@ const reducer = (state = initialState , action) => {
           
           case GET_TEAM :
             const sortedTeams = action.payload.sort((a, b) => {
-              const nameA = a.name.toLowerCase();
+              const nameA = a.name.toLowerCase(); //convierte en minuscula para comparar 
               const nameB = b.name.toLowerCase();
     
              if (nameA < nameB) return -1;

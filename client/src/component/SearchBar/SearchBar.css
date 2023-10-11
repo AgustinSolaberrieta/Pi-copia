@@ -1,24 +1,24 @@
 .container {
     display: flex;
-    align-items: center; /* Centra verticalmente los elementos en la línea */
-    padding: 0px; /* Añade espacio alrededor del contenido */
+    align-items: center; 
+    padding: 0px; 
   }
   
   .header {
-    margin-right: 28%; /* Espacio entre el logo y el campo de búsqueda */
+    margin-right: 28%; 
   }
   
   .logo {
-    width: 180px; /* Ajusta el ancho del logo según sea necesario */
-    height: auto; /* Mantiene la proporción original del logo */
+    width: 180px; 
+    height: auto; 
   }
   
   .form-container {
-    display: flex; /* Crea un contenedor flex para los elementos del formulario */
-    align-items: center; /* Centra verticalmente los elementos en el formulario */
+    display: flex; 
+    align-items: center; 
   }
   
-  /* Estilos adicionales según sea necesario */
+
   body{
     background-color: black;
   }
@@ -86,16 +86,15 @@
   }
   
   .submit {
-    background-color: rgb(224, 26, 26); /* Establece el color de fondo a negro */
-    color: white; /* Cambia el color del texto a blanco para mayor contraste */
-    /* Otros estilos opcionales */
+    background-color: rgb(224, 26, 26); 
+    color: white; 
     border-radius: none;
     padding: 3px 5px; /* Ajusta el espaciado interno del botón */
-    cursor: pointer; /* Cambia el cursor al puntero cuando se coloca sobre el botón */
+    cursor: pointer; 
   }
   
   .submit:hover {
-    background-color: #333; /* Cambia el color de fondo cuando se pasa el mouse por encima */
+    background-color: #333; 
   }
   
 

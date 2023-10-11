@@ -13,8 +13,8 @@ const Nav = () => {
       
       
       <SearchBar />
-      <button className='Boton2'  style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <Link to='/create'>New Driver</Link>
+      <button className='Boton2'  style={{ display: "flex", alignItems: "center", justifyContent: "space-between" , color: "gren"}}>
+          <Link to='/create'style={{ textDecoration: "none", color: "white", fontWeight: "bold" }}>New Driver</Link>
         </button>
       <Filter/>
         

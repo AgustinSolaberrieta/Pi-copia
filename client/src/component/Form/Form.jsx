@@ -1,15 +1,3 @@
-// // Este formulario debe ser controlado completamente con JavaScritp. No se pueden utilizar validaciones HTML, ni utilizar librerías especiales para esto. Debe contar con los siguientes campos:
-// // Nombre.
-// // Apellido.
-// // Nacionalidad.
-// // Imagen.
-// // Fecha de Nacimiento.
-// // Descripción.
-// // Escuderías.
-// // Posibilidad de seleccionar/agregar varias escuderías en simultáneo.
-// // Botón para dar de alta (crear) el nuevo driver.
-// // [IMPORTANTE]: es requisito que el formulario de creación esté validado sólo con JavaScript. Puedes agregar las validaciones que consideres. Por ejemplo: que el nombre del driver no pueda contener símbolos,etc.
-
 import "./Form.css"
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +8,7 @@ import validation from "../validation"
 const endpoint = 'http://localhost:3001'
 
 const Form = () => {
-  const dispatch = useDispatch() 
+  const dispatch = useDispatch(); 
   const navigate = useNavigate();
  
 
@@ -29,12 +17,13 @@ const Form = () => {
   useEffect(()=>{
     dispatch(getTeams())
   }, [])
+
   const handleBack = () => {
     window.history.back();
 }
 
 
-  const [driver, setDriver] = useState({
+  const [driver, setDriver] = useState({ //creando un estado inicial driver , para almacenar información sobre un conductor.
     name: "",
     surname: "",
     nationality: "",
@@ -51,7 +40,6 @@ const Form = () => {
 
     try {
       const response = await axios.post(`${endpoint}/drivers`, driver);
-      console.log("Conductor creado con éxito:", response.data);
       navigate(`/detail/${response.data.id}`);
       return
     } catch (error) {
@@ -76,13 +64,10 @@ const Form = () => {
     setError(validation(driver))
   }
 
-  const handleLoadMoreTeams = () => { // Mostrar 12 equipos adicionales cuando se haga clic en "Cargar más"
-   
-    setTeamsToShow(teamsToShow + 20);
-  }
+  
  
   return (
-  <div>
+  <div className="fon">
      <button onClick={handleBack} className="logOut" style={{ marginLeft: 'auto' }}>BACK</button>
      
  
@@ -94,18 +79,18 @@ const Form = () => {
 
       <div className="Columna">
         <div className="labelinput">
-            <label htmlFor="name">Nombre</label>
+            <label htmlFor="name">Name</label>
             <input  type="text" id="name" name="name" value={driver.name} onChange={(e) => setDriver({ ...driver, name: e.target.value })}/>
             {error.name && <p >{error.name}</p>}
          </div>
         <div className="labelinput">
-          <label htmlFor="nationality">Nacionanlidad</label>
+          <label htmlFor="nationality">Nationality</label>
           <input  type="text" id="nationality" name="nationality" value={driver.nationality} onChange={(e) => setDriver({ ...driver, nationality: e.target.value })}/> 
           {error.nationality && <p >{error.nationality}</p>}
         </div>
 
         <div className="labelinput">
-            <label htmlFor="image">Imagen:</label>
+            <label htmlFor="image">Image</label>
            <input  type="text" id="image" name="image" value={driver.image} onChange={(e) => setDriver({ ...driver, image: e.target.value })}/>
            {error.image && <p >{error.image}</p>}
         </div>
@@ -114,17 +99,17 @@ const Form = () => {
       
       <div className="Columna">
       <div className="labelinput">
-          <label htmlFor="surname">Apellido</label>
+          <label htmlFor="surname">Surname</label>
           <input  type="text" id="surname" name="surname" value={driver.surname} onChange={(e) => setDriver({ ...driver, surname: e.target.value })}/>
           {error.surname && <p >{error.surname}</p>}
       </div>
       <div className="labelinput">
-           <label htmlFor="dob">Fecha de nacimiento</label>
+           <label htmlFor="dob">Dob</label>
            <input  type="date" id="dob" name="dob" value={driver.dob} onChange={(e) => setDriver({ ...driver, dob: e.target.value })}/>
            {error.dob && <p >{error.dob}</p>}
       </div>   
       <div className="labelinput"> 
-           <label htmlFor="description">Descripcion:</label>
+           <label htmlFor="description">Description</label>
            <input  type="text" id="description" name="description" value={driver.description} onChange={(e) => setDriver({ ...driver, description: e.target.value })}/>
            {error.description && <p >{error.description}</p>}
       </div>
@@ -134,7 +119,7 @@ const Form = () => {
     </section>
     
       <div className="equipos">
-      <label htmlFor="teams">Escuderías</label>
+      <label htmlFor="teams">Teams</label>
 
       <ul className="team-list">
         {apiteams.map((team) => {
@@ -152,12 +137,9 @@ const Form = () => {
           );
         })}
       </ul>
-      {teamsToShow < apiteams.length && (
-        <button onClick={handleLoadMoreTeams}>Cargar más equipos</button>
-      )}
       </div>
 
-      <button onClick={handleSubmit} >Crear</button>
+      <button onClick={handleSubmit}  class="btn">Create</button>
     </div></div>
   );
 };

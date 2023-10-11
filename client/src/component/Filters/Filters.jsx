@@ -14,8 +14,6 @@ const Filter = () => {
 
   const handleOrderChange = (event) => {
     setSelectedTeam(event.target.value);
-    
-    // Aplicar la orden según la opción seleccionada
     if (event.target.value === 'asc') {
       dispatch(setOrderByAsc());
     } else if (event.target.value === 'desc') {
@@ -45,29 +43,7 @@ const Filter = () => {
     }
   };
 
-  //  const handleOrderByNameAsc = () => {
-  //   dispatch(setOrderByAsc());
-  // };
-
-  // const handleOrderByNameDesc = () => {
-  //   dispatch(setOrderByDesc());
-  // };
-
-
-  // const handleOrderByDOBAsc = () => {
-  //     dispatch(orderDriversByDOBAsc());
-  //   };
-  //   const handleOrderByDOBDesc = () => {
-  //     dispatch(orderDriversByDOBDesc());
-  //   };
-
-    // const filterbybd= () => {
-    //   dispatch(filterByDataBase())
-    // }
-
-    // const filterbyApi = () => {
-    //   dispatch(filterByApi())
-    // }
+ 
     
     const handleTeamChange = (event) => {
       const selectedTeamName = event.target.value;
@@ -85,33 +61,25 @@ const Filter = () => {
   return (
     <div className='filtros'>
       <select  value={selectedTeam} onChange={handleOrderChange}>
-        <option value="">Selecciona una opción order por Nombre</option>
-        <option value="asc">Ascendente</option>
-        <option value="desc">Descendente</option>
+        <option value="">Sort by name</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
       </select>
-      {/* <button onClick={handleOrderByNameAsc}>Ordenar por Nombre Ascendente</button>
-      <button onClick={handleOrderByNameDesc}>Ordenar por Nombre Descendente</button> */}
-
-       {/* <label htmlFor="orderDOB">Ordenar por Fecha de Nacimiento:</label> */}
+      
       <select id="orderDOB" value={selectedTeam} onChange={handleOrderDob}>
-        <option value="">Ordenar por Fecha de Nacimiento</option>
-        <option value="dob-asc">Ascendente</option>
-        <option value="dob-desc">Descendente</option>
+        <option value="">Sort by dob</option>
+        <option value="dob-asc">Ascending</option>
+        <option value="dob-desc">Descending</option>
       </select>
-      {/* <button onClick={handleOrderByDOBAsc}>Ordenar por Fecha de Nacimiento Ascendente</button>
-      <button onClick={handleOrderByDOBDesc}>Ordenar por Fecha de Nacimiento Descendente</button>
-       */}
+       
        <select value={selectedTeam} onChange={filter}>
-        <option value="">Ordenar por Fecha de Origen</option>
-        <option value="BaseDatos">Creados</option>
-        <option value="Api">Ya creados</option>
+        <option value="">Origin</option>
+        <option value="BaseDatos">Data Base</option>
+        <option value="Api">Api</option>
       </select>
-       {/* <button onClick={filterbybd}>Ordena por creados </button>
-       <button onClick={filterbyApi}>Ya creados</button> */}
-
-     
+        
       <select onChange={handleTeamChange} value={selectedTeam}>
-  <option value="">Selecciona un equipo</option>
+  <option value="">Select by team</option>
   {teams.map((team) => (
     <option key={team.id} value={team.name}>
       {team.name}

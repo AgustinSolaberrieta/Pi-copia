@@ -6,6 +6,7 @@ import "./Cards.css"
 
 
 const Cards = () => {
+
   const dispatch = useDispatch();
   const driver = useSelector((state) => state.drivers.data || []); // Obtiene los datos de los conductores desde Redux
   const driversPerPage = 9; // Número de conductores por página
@@ -17,18 +18,16 @@ const Cards = () => {
     dispatch(getDrivers());
   }, [dispatch]);
 
-  // Calcula el índice del último conductor en la página actual
-  const indexOfLastDriver = currentPage * driversPerPage;
-  // Calcula el índice del primer conductor en la página actual
-  const indexOfFirstDriver = indexOfLastDriver - driversPerPage;
 
-  // Obtiene los conductores que se mostrarán en la página actual
+  
+  const indexOfLastDriver = currentPage * driversPerPage;
+  const indexOfFirstDriver = indexOfLastDriver - driversPerPage;
   const currentDrivers = driver.slice(indexOfFirstDriver, indexOfLastDriver);
  
   useEffect(()=>{
  setCurrentPage(1)
 
-  }, [driver])
+  }, [driver]) // cuando los conductores cambian se vuelve aponer en el primero
 
 
   return (
@@ -60,7 +59,7 @@ const Cards = () => {
         >
            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-           </svg>Anterior 
+           </svg>BACK 
 
         </button>
 
@@ -70,7 +69,7 @@ const Cards = () => {
           className="page-link"
           disabled={currentPage === Math.ceil(driver.length / driversPerPage)} // Deshabilitado en la última página
         >
-          Siguiente <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          NEXT <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 </svg>
 
