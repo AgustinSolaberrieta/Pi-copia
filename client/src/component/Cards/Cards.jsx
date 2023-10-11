@@ -10,6 +10,7 @@ const Cards = () => {
   const driver = useSelector((state) => state.drivers.data || []); // Obtiene los datos de los conductores desde Redux
   const driversPerPage = 9; // Número de conductores por página
   const [currentPage, setCurrentPage] = useState(1); // Página actual, comienza en la página 1
+  
 
   useEffect(() => {
     // Al cargar el componente, dispara la acción para obtener los conductores
@@ -18,12 +19,17 @@ const Cards = () => {
 
   // Calcula el índice del último conductor en la página actual
   const indexOfLastDriver = currentPage * driversPerPage;
-
   // Calcula el índice del primer conductor en la página actual
   const indexOfFirstDriver = indexOfLastDriver - driversPerPage;
 
   // Obtiene los conductores que se mostrarán en la página actual
   const currentDrivers = driver.slice(indexOfFirstDriver, indexOfLastDriver);
+ 
+  useEffect(()=>{
+ setCurrentPage(1)
+
+  }, [driver])
+
 
   return (
     <div className="cartas-container">
@@ -53,8 +59,8 @@ const Cards = () => {
           disabled={currentPage === 1} // Deshabilitado en la primera página
         >
            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-</svg>Anterior 
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+           </svg>Anterior 
 
         </button>
 

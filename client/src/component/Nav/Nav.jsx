@@ -17,10 +17,6 @@ const Nav = () => {
           <Link to='/create'>New Driver</Link>
         </button>
       <Filter/>
-      
-      
-        
-     
         
     </nav>
   );

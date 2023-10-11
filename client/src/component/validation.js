@@ -3,7 +3,10 @@ const validation = (driver) => {
 
   if (!driver.name.trim()) {
     errors.name = "El nombre es obligatorio";
-  }
+  }else if (driver.name.length > 20){
+    errors.name = "El nombre no puede ser mayor a 20 letras"
+   }
+ 
 
   if (!driver.surname.trim()) {
     errors.surname = "El apellido es obligatorio";

@@ -44,7 +44,7 @@ const Form = () => {
     teams: [], // Esto debe ser un equipo seleccionado en el dropdown
   });
   const [error, setError] = useState({})
-  const [teamsToShow, setTeamsToShow] = useState(12); 
+  const [teamsToShow, setTeamsToShow] = useState(20); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -78,50 +78,68 @@ const Form = () => {
 
   const handleLoadMoreTeams = () => { // Mostrar 12 equipos adicionales cuando se haga clic en "Cargar más"
    
-    setTeamsToShow(teamsToShow + 12);
+    setTeamsToShow(teamsToShow + 20);
   }
  
   return (
   <div>
-     <button onClick={handleBack} className="logOut" style={{ marginLeft: 'auto' }}>BACK</button><h1 className="titulo">Create your own driver</h1>
+     <button onClick={handleBack} className="logOut" style={{ marginLeft: 'auto' }}>BACK</button>
+     
  
     <div className="formulario">
       
-      <div className="Columna">
-      <label htmlFor="name">Nombre</label>
-         <input  type="text" id="name" name="name" value={driver.name} onChange={(e) => setDriver({ ...driver, name: e.target.value })}/>
-         {error.name && <p style={{color: "red"}}>{error.name}</p>}
+      <h1 className="titulo">Create your own driver</h1>
 
-      <label htmlFor="surname">Apellido</label>
+      <section className="forminput">
+
+      <div className="Columna">
+        <div className="labelinput">
+            <label htmlFor="name">Nombre</label>
+            <input  type="text" id="name" name="name" value={driver.name} onChange={(e) => setDriver({ ...driver, name: e.target.value })}/>
+            {error.name && <p >{error.name}</p>}
+         </div>
+        <div className="labelinput">
+          <label htmlFor="nationality">Nacionanlidad</label>
+          <input  type="text" id="nationality" name="nationality" value={driver.nationality} onChange={(e) => setDriver({ ...driver, nationality: e.target.value })}/> 
+          {error.nationality && <p >{error.nationality}</p>}
+        </div>
+
+        <div className="labelinput">
+            <label htmlFor="image">Imagen:</label>
+           <input  type="text" id="image" name="image" value={driver.image} onChange={(e) => setDriver({ ...driver, image: e.target.value })}/>
+           {error.image && <p >{error.image}</p>}
+        </div>
+     </div>
+         
+      
+      <div className="Columna">
+      <div className="labelinput">
+          <label htmlFor="surname">Apellido</label>
           <input  type="text" id="surname" name="surname" value={driver.surname} onChange={(e) => setDriver({ ...driver, surname: e.target.value })}/>
-          {error.surname && <p style={{color: "red"}}>{error.surname}</p>}
+          {error.surname && <p >{error.surname}</p>}
+      </div>
+      <div className="labelinput">
+           <label htmlFor="dob">Fecha de nacimiento</label>
+           <input  type="date" id="dob" name="dob" value={driver.dob} onChange={(e) => setDriver({ ...driver, dob: e.target.value })}/>
+           {error.dob && <p >{error.dob}</p>}
+      </div>   
+      <div className="labelinput"> 
+           <label htmlFor="description">Descripcion:</label>
+           <input  type="text" id="description" name="description" value={driver.description} onChange={(e) => setDriver({ ...driver, description: e.target.value })}/>
+           {error.description && <p >{error.description}</p>}
       </div>
 
-      <div className="Columna">
-           <label htmlFor="nationality">Nacionanlidad</label>
-           <input  type="text" id="nationality" name="nationality" value={driver.nationality} onChange={(e) => setDriver({ ...driver, nationality: e.target.value })}/> {error.nationality && <p style={{color: "red"}}>{error.nationality}</p>}
-         
-            <label htmlFor="dob">Fecha de nacimiento</label>
-           <input  type="date" id="dob" name="dob" value={driver.dob} onChange={(e) => setDriver({ ...driver, dob: e.target.value })}/>{error.dob && <p style={{color: "red"}}>{error.dob}</p>}
       </div> 
 
-      <div className="Columna">   
-           <label htmlFor="image">Imagen:</label>
-           <input  type="text" id="image" name="image" value={driver.image} onChange={(e) => setDriver({ ...driver, image: e.target.value })}/>{error.image && <p style={{color: "red"}}>{error.image}</p>}
-      
-            <label htmlFor="description">Descripcion:</label>
-            <input  type="text" id="description" name="description" value={driver.description} onChange={(e) => setDriver({ ...driver, description: e.target.value })}/>{error.description && <p style={{color: "red"}}>{error.description}</p>}
-             <hr/>
-      </div> 
-
-      <hr />
+    </section>
+    
       <div className="equipos">
       <label htmlFor="teams">Escuderías</label>
 
       <ul className="team-list">
-        {apiteams.slice(0, teamsToShow).map((team) => {
+        {apiteams.map((team) => {
           return (
-            <div key={team.id}>
+            <li key={team.id} className="itemlist">
               <input
                 type="checkbox"
                 name={team.name}
@@ -130,14 +148,14 @@ const Form = () => {
                 onChange={handleTeamChange}
               />
               <span name={team.name}>{team.name}</span>
-            </div>
+            </li>
           );
         })}
       </ul>
       {teamsToShow < apiteams.length && (
         <button onClick={handleLoadMoreTeams}>Cargar más equipos</button>
       )}
-      <hr /></div>
+      </div>
 
       <button onClick={handleSubmit} >Crear</button>
     </div></div>
